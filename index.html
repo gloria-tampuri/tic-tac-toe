@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/config-overlay.css">
     <link rel="stylesheet" href="/styles/game.css">
     <script src="playerConfig.js" defer></script>
+    <script src="game.js" defer></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
@@ -32,6 +33,7 @@
                </div>
            </form>
        </aside>   
+      
        <section id="game-configuration">
             <ol>
                 <li>
@@ -51,12 +53,12 @@
                     </article>
                 </li>
             </ol>
-            <button class="btn">Start New Game</button>
+            <button class="btn " id="start-game">Start New Game</button>
        </section>
 
-       <section id="active-game">
+       <!-- <section id="active-game">
 
-       </section>
+       </section> -->
 
        <section id="active-game">
            <article id="game-over">
@@ -65,15 +67,15 @@
            </article>
            <p>Its your turn <span id="active-player-name">PLAYER Name</span></p>
            <ol id="game-board">
-               <li class="disabled">0</li>
                <li></li>
-               <li class="disabled">X</li>
-
-               <li class="disabled">X</li>
-               <li class="disabled">0</li>
+               <li></li>
                <li></li>
 
-               <li class="disabled">0</li>
+               <li class=""></li>
+               <li ></li>
+               <li></li>
+
+               <li></li>
                <li></li>
                <li></li>
            </ol>
