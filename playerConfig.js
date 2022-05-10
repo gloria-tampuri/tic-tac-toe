@@ -1,3 +1,14 @@
+const players =[
+    {
+     playerName:'',
+     symbol   :'X'
+    },
+
+    {
+        playerName:'',
+        symbol:'0'
+    },
+]
 
 const actualName1 = document.getElementById('actualname1');
 const actualName2 = document.getElementById('actualname2');
@@ -8,6 +19,7 @@ const cancelBtn = document.querySelector('.cancel');
 const confirmBtn = document.querySelector('.confirm');
 const nameValue = document.getElementById('playername');
 const backDrop = document.querySelector('.backdrop');
+const errorMessage = document.getElementById('config-error')
 let playerStateId;
 
 // functions
@@ -25,35 +37,44 @@ function closeModal() {
     configOverlay.style.display = 'none';
     nameValue.value ="";
     backDrop.style.display ='none';
+    errorMessage.textContent ='';
+   
 }
 
 //player validation and text acceptance
 function confirmPlayer(e) {
     e.preventDefault();
-    let name = nameValue.value;
-
+    let name = nameValue.value.trim();
+    
     if (playerStateId === 'add-player-1-name') {
         // name.length < 1 ? null  : actualName1.textContent = name;
         if(name.length < 1 ){
             // alert(typeof name);
-            alert('please enter valid name')
-            closeModal()
-            return null;
+            // 
+            // e.target.firstElementChild.classList.add('error');
+            errorMessage.textContent ='Please enter a valid username!';
+            errorMessage.style.color ='rgb(136, 2, 2)'
+            return;
+            // closeModal()
+            // return null;
         }else{
-            alert(typeof name)
+            // alert(typeof name)
             closeModal()
-            return actualName1.textContent = name
+            return actualName1.textContent = name;
         }
     } else {
         if(name.length < 1){
-            closeModal()
-            return null;
+            errorMessage.textContent ='Please enter a valid username!';
+            errorMessage.style.color ='rgb(136, 2, 2)'
+            // closeModal()
+            return ;
         }else{
             closeModal()
-            return actualName1.textContent = name
+            return actualName2.textContent = name
         }
+        
     }
-
+    
     // let defaultName =actualName1.textContent;
 
     // if (name.length < 1) {

@@ -21,6 +21,16 @@ font-weight: bold;
     width: 15rem;
 }
 
+.error input{
+    border-color: rgb(136, 2, 2);;
+    color: rgb(136, 2, 2);
+    background-color: white;
+}
+.error label{
+    color: rgb(136, 2, 2);
+
+}
+
 
 #game-configuration{
     width: 90%;

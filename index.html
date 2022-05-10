@@ -27,8 +27,11 @@
                    <label for="playername" id="label">Player name</label>
                    <input type="text" name="username" id="playername">
                </div>
+              
+                   <p id="config-error"> </p>
+               
                <div>
-                   <button type="button" class="btn btn-alt cancel">Cancel</button>
+                   <button type="reset" class="btn btn-alt cancel">Cancel</button>
                    <button type="submit" class="btn confirm">Confirm</button>
                </div>
            </form>
@@ -67,17 +70,17 @@
            </article>
            <p>Its your turn <span id="active-player-name">PLAYER Name</span></p>
            <ol id="game-board">
-               <li></li>
-               <li></li>
-               <li></li>
+               <li data-col="1" data-row="1"> </li>
+               <li data-col="2" data-row="1"></li>
+               <li data-col="3" data-row="1"></li>
 
-               <li class=""></li>
-               <li ></li>
-               <li></li>
+               <li data-col="1" data-row="2"></li>
+               <li data-col="2" data-row="2"></li>
+               <li data-col="3" data-row="2"></li>
 
-               <li></li>
-               <li></li>
-               <li></li>
+               <li data-col="1" data-row="3"></li>
+               <li data-col="2" data-row="3"></li>
+               <li data-col="3" data-row="3" ></li>
            </ol>
        </section>
    </main>
